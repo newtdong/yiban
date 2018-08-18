@@ -10,8 +10,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/index','index@index')->name('index');
+Route::get('/','index@index')->name('index');
+Route::get('/dati','dati@index')->name('dati');
+Route::get('/rank','rank@index')->name('rank');
+Route::get('/hasjoin','hasjoin@index')->name('hasjoin');
 

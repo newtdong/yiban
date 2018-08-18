@@ -1,0 +1,26 @@
+/* CSS Document */
+html{_text-overflow:ellipsis;overflow-y:scroll;}
+body { color:#333;font-size:12px; font-family: Tahoma, Microsoft YaHei, Simsun, Arial, Helvetica, sans-serif;line-height: 1.6;background:#DFF5FF;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset, img { border:0; }
+address, caption, cite, code, dfn, em, th, var, optgroup { font-style:inherit; font-weight:inherit; }
+del, ins { text-decoration:none; }
+li { list-style:none; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal; }
+input, button, textarea, select, optgroup, option { font-family:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; }
+input, button, textarea, select { *font-size:100%;}
+em,i,s,u{font-weight: normal;font-size: 12px;font-style: normal;text-decoration: none;}
+a {color:#2076b2;text-decoration: none; }
+a:hover { text-decoration: underline;}
+.clear{clear:both;}
+.formLi:after {
+content: ".";
+display: block;
+clear: both;
+visibility: hidden;
+line-height: 0;
+height: 0;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
