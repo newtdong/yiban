@@ -51,8 +51,14 @@
         </ul>
     </div>
 </div>
-<div id="main" style="font-size: 22px;text-align: center">
-    此功能正在开发中，敬请期待！
+<div id="main" style="text-align: center">
+    @if($score>89)
+        您答了{{$score}}分，真是太棒了！
+        @elseif($score>79)
+        您答了{{$score}}分，还不错呦！
+        @else
+        您答了{{$score}}分，谢谢参与！
+        @endif
 </div>
 
     <script>

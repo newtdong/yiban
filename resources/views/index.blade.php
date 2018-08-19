@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- saved from url=(0036)http://proj.yiban.cn/project/40znhd/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>不忘改革初心 坚定砥砺前行</title>
     <link rel="stylesheet" href="/index/main.css">
@@ -47,83 +49,56 @@
         <ul>
             <li><a href="{{url('/')}}" class="jieshaoO act">大赛介绍</a></li>
             <li><a href="{{url('/dati')}}" class="baomingO">在线答题</a></li>
-                        <li><a href="{{url('rank')}}" class="zuopinO">排行榜</a></li>
+            <li><a href="{{url('rank')}}" class="zuopinO">排行榜</a></li>
         </ul>
     </div>
 </div>
 <div id="main">
     <div class="jieshao" style="display: block; padding: 20px 40px; opacity: 1;">
         <div class="inframe">
-            <div class="type"><span>活动介绍：</span></div>
+            <div class="type"><span>一、目的意义</span></div>
             <div class="cc">
-                  为庆祝改革开放40周年，宣传将改革进行到底的新时代理念，拟举行上海高校“改革开放40周年”主题教育活动，覆盖上海市各高校，依托易班，以“不忘改革初心，坚定砥砺前行”为主题，激励高校师生不忘初心、牢记使命、砥砺前行。
+                  2018年是中国改革开放40周年。<b>40年来，</b>在中国共产党领导下，中国社会发生了翻天覆地的巨大变化，综合国力急剧增强，人民生活水准飞速提高，中华民族努力实现民族伟大复兴的中国梦。广大青年学生是祖国的未来，是民族复兴的希望，为了将纪念改革开放同青年学生思想教育有效结合，按照辽宁省首届网络文化节的有关要求，开展“纪念改革开放40周年”大学生网络知识竞赛活动。
+            </div>
+        </div>
+        <div class="inframe">
+            <div class="type"><span>二、活动时间</span></div>
+            <div class="cc">
+                  2018年9月5日--2018年9月30日。
+            </div>
+        </div>
+        <div class="inframe">
+            <div class="type"><span>三、参与方式</span></div>
+            <div class="cc">
+                <p>活动对象：高校全日制在校学生</p>
+                <p>各试点高校学生登录辽宁大学生在线联盟（辽宁易班）首页“首届辽宁省大学生网络文化节”专题网站中开设的“纪念改革开放40周年”大学生网络知识竞赛专区，登录易班账户，即可参与线上答题。</p>
+            </div>
+        </div>
+        <div class="inframe">
+            <div class="type"><span>四、获奖名单产生方式</span></div>
+            <div class="cc">
+                本次活动分别设置5所优秀组织单位和100名优秀个人奖。其中优秀组织单位奖按照组织发动好、参与人数多的原则，根据各试点高校参赛人数网上排名进行评选。优秀个人奖由计算机抽奖对于满分答卷进行随机抽取，如满分答卷未达到奖项设置总量时，则按照试卷分时由高到低排序，按得分高低确定相应奖项。
+            </div>
+        </div>
+        <div class="inframe">
+            <div class="type"><span>五、联系人及联系方式</span></div>
+            <div class="cc">
                 <p>
-                    <span class="bold">活动名称：</span>上海市高校“改革开放40周年”主题教育活动<br>
-                    <span class="bold">活动时间：</span>2018年7月——2018年10月<br>
-                    <span class="bold">参赛对象：</span>上海市各高校在校师生<br>
-                    <span class="bold">主办单位：</span>上海教育系统网络文化发展研究中心
+                    联系人：沈阳航空航天大学学生处 邱喆
+                    <br>
+                    联系电话：18040032055
                 </p>
             </div>
         </div>
         <div class="inframe">
-            <div class="type"><span>作品要求：</span></div>
+
             <div class="cc">
-                  围绕改革开放四十周年主题，依托改革开放40周年的时代背景，面向各校师生征集对新时代的感悟，为更多师生提供向新时代表达期望和深情发声的机会，激发师生的思想共鸣和情感交流，内容必须为原创，严禁抄袭。<br>
-                <p>
-                    <span class="bold">影像征集：</span><br>  以“ 新时代，我想对你说”为主题面向上海高校征集师生对新时代的感悟及寄语的原创短视频，每段寄语时长1分钟左右，要求视频清晰，规格要求1920*1080 25P（高清），作品文件大小不得超过50M。
-                </p>
-                <p>
-                    <span class="bold">原创征文：</span><br>  以“不忘初心，砥砺前行”为主题面向上海高校师生征集原创文章，内容应紧扣本次征文主题，回顾改革开放以来我们党带领人民走过的非凡历程、取得的非凡成就及个人的所感所得，内容积极，健康向上，具有正确的舆论导向和鲜明的时代气息，体裁不限，博文、小说、散文、诗歌、报告文学等皆可，字数不超过2000字。
-                </p>
-                <p>
-                    <span class="bold">主题摄影：</span><br>  以“我眼中的新时代”为主题面向上海高校师生征集原创摄影作品，内容可包含：
-                </p>
-                <dl>
-                    <dd>1.校园风采：</dd>
-                    <dt>从感念改革开放四十年高速发展的角度出发，记录新时代大学生校园生活万象，展现校园的美好与变迁。 </dt>
-                </dl>
-                <dl>
-                    <dd>2.社会纪实：</dd>
-                    <dt>记录改革开放以来上海市以及松江区社会生活、生态环境等方面的变化，挖掘新时代中国成就背后的感人故事。</dt>
-                </dl>
-                <dl>
-                    <dd>3.创意摄影：</dd>
-                    <dt>以摄影为艺术创作媒介，借助特技效果或其他影像元素，传达对改革开放四十年上海市以及松江区发展成就的赞颂和热爱。</dt>
-                </dl>
-                <dl>
-                    <dd>4.图片故事：</dd>
-                    <dt>以3—6张组图形式出现的叙事图片，照片之间应有紧密的视觉和逻辑关联，再配以文字说明，构成一个完整而不可任意拆分的整体，照片要具有真实性、人文性，紧扣主题，洞察并与所有人分享改革开放以来上海市以及松江区高速发展及人民生活的美好变化。</dt>
-                </dl>
-                <p>  作品以jpg格式提交，附主题和作品简介，保留EXIF信息。单张图片大小在1024*1024以内，作品文件大小不得超过10M。</p>
-            </div>
-        </div>
-        <div class="inframe">
-            <div class="type"><span>奖项设置：</span></div>
-            <div class="cc">
-            征文类和摄影类活动各设置一等奖10名、二等奖20名、三等奖30名。校际比赛获奖者可获得主办方颁发的市级荣誉证书及奖品。
-            </div>
-        </div>
-        <div class="inframe">
-            <div class="type"><span>评选办法：</span></div>
-            <div class="cc">
-            通过线下专家评审的方式评选具备导向性、示范性的高水平获奖作品并公示。
-            </div>
-        </div>
-        <div class="inframe">
-            <div class="type"><span>作品展示：</span></div>
-            <div class="cc">
-            作品将在易班网及各高校官方网站宣传展示。
-            </div>
-        </div>
-        <div class="inframe">
-            <div class="type"><span>参加方式：</span></div>
-            <div class="cc">
-            报名方式为通过易班网活动平台，在线报名和提交作品。
+                “纪念改革开放40周年”大学生网络知识竞赛组委会
             </div>
         </div>
         <div class="clearfix"></div>
     </div>
-    
+
     <script>
         function baominglink(uid) {
             if (uid && uid > 0) {
@@ -133,19 +108,19 @@
             return false;
         }
     </script>
-    
+
     <div class="xinwen" style="display: none; padding: 20px 0px; opacity: 0;">
         <ul class="newslist">
-                        <p style="text-align:center;font-size:20px;color:#666;padding:50px 0;">暂无新闻速递</p>
-                                </ul>
+            <p style="text-align:center;font-size:20px;color:#666;padding:50px 0;">暂无新闻速递</p>
+        </ul>
         <div class="pages">
-                </div>
+        </div>
     </div>
-        
+
     <div class="clearfix" style="opacity: 0; display: none;"></div>
-    
+
 </div>
 
 <script type="text/javascript">
-   
+
 </script>

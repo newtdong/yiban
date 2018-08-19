@@ -1743,11 +1743,12 @@ p.arMainTxt {
 	font-size: 14px;
 	text-align: center;
 	display: block;
-	width:134px;
+	width:200px;
 	height:48px;
 	line-height: 40px;
 	padding-left: 5px;
 	background: url(/index/tit.png) no-repeat;
+	background-size: 100% 100%;
 }
 .inframe .cc {
 	text-align:justify;
