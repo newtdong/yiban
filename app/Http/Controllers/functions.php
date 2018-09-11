@@ -10,19 +10,18 @@ class functions extends Controller
     //web参数，由易班网给定
     static $appid = "7b019d433529d449";
     static $appsecret = "434787ce017b4ff4f800678b33244325";
-    static $callback = "http://yiban.dlinkblog.cn";
-    /*题目数*/
-    static $sum=10;
+    static $callback = "http://202.199.24.76";
+    /*题目数量*/
+    static $sum=25;
 
     /*
-     * code检测:检测是否授权
-     * */
+     * code检测：检测是否授权  */
     public static function ifcode($code)
     {
         if ($code)
             return $code;
         else
-            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://yiban.dlinkblog.cn");
+            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://202.199.24.76");
     }
 
     /*
@@ -30,7 +29,7 @@ class functions extends Controller
      * */
     public static function getaccesstoken($token)
     {
-        $uri = 'https://oauth.yiban.cn/token/info?code=' . $token . '&client_id=' . self::$appid . '&client_secret=' . self::$appsecret . '&redirect_uri=' . self::$callback;
+        $uri = 'https://oauth.yiban.cn/token/info?code=' . $token . '&client_id=' . self::$appid . '&client_secret=' . self::$appsecret . '&redirect_uri=http://202.199.24.76';
         $response = self::requir($uri);
         $response = json_decode($response, true);
         //dump($token);
@@ -39,7 +38,7 @@ class functions extends Controller
             session(['access_token' => $response['access_token']]);
             return $response['access_token'];
         } else {
-            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://yiban.dlinkblog.cn");
+            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://202.199.24.76");
 
         }
 
@@ -114,12 +113,13 @@ class functions extends Controller
             "time" => $time,
         );
         if (DB::table('user')->where('userid', session('yb_userid'))->exists()) {
-            return;
+            return view('hasjoin');
         } else
             DB::table('user')->insert($data);
+            self::rank(session('yb_schoolid'),$score,session('yb_schoolname'));
     }
 
-    /*object转数组*/
+    /*object转array*/
     public static function object2array($object)
     {
         if (is_object($object)) {
@@ -130,5 +130,40 @@ class functions extends Controller
             $array = $object;
         }
         return $array;
+    }
+    public static function rank($schoolid,$score,$schoolname){
+        if (DB::table('school')->where('id',$schoolid)->exists()) {
+            $num=DB::table('school')->where('id',$schoolid)->value('num');
+            $sum=DB::table('school')->where('id',$schoolid)->value('sum');
+            $max=DB::table('school')->where('id',$schoolid)->value('max');
+            $num++;
+            $sum=$sum+$score;
+            $avage=$sum/$num;
+            if($score>$max)
+                $max=$score;
+         DB::table('school')->where('id',$schoolid)->update(['num'=>$num,'sum'=>$sum,'max'=>$max,'avage'=>$avage]);
+        }
+        else
+        {
+            DB::table('school')->insert(
+                ['id'=>$schoolid,
+                'name'=>$schoolname,
+                'num'=>1,
+                'sum'=>$score,
+                'max'=>$score,
+                'avage'=>$score
+                ]);
+        }
+
+    }
+    public static function ifsessonname(){
+        //dump(session('yb_userid'));
+        if(session('yb_userid')!=null)
+            return 0;
+        else
+        {
+            //echo "wewewe";
+           return 1;
+        }
     }
 }

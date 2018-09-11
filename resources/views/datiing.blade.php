@@ -66,17 +66,17 @@
     </div>
 </div>
 <div id="main">
-    <form action="{{url('/score')}}" style="text-align: center" method="get">
+    <form action="{{url('/score')}}" style="text-align: center" method="get" id="mmp">
         @foreach($sub as $item)
             <div style="text-align: left">
                 <p style="text-align: left">&nbsp;&nbsp;{{$sum++}}. {{$item->title}}</p><br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="{{$item->id}}" value="A">A:{{$item->optionA}}</label><br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="{{$item->id}}" value="B">B:{{$item->optionB}}</label><br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="{{$item->id}}" value="A">{{$item->optionA}}</label><br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="{{$item->id}}" value="B">{{$item->optionB}}</label><br>
                 <label>&nbsp;&nbsp;&nbsp;@if($item->optionC)
-                        <input type="radio" name="{{$item->id}}" value="C">C:{{$item->optionC}}
+                        <input type="radio" name="{{$item->id}}" value="C">{{$item->optionC}}
                     @endif</label><br>
                 <label>&nbsp;&nbsp;&nbsp;@if($item->optionD)
-                        <input type="radio" name="{{$item->id}}" value="D">D:{{$item->optionD}}
+                        <input type="radio" name="{{$item->id}}" value="D">{{$item->optionD}}
                     @endif</label>
 
                 <hr>
@@ -84,6 +84,24 @@
             </div>
 
         @endforeach
-        <input type="submit" value="提交" class="btn btn-primary">
+        <input type="submit" value="提交" class="btn btn-primary" onclick="return check()">
     </form>
+    <script>
+        function check(){
+            var flag=0;
+            var _radio = document.getElementById("mmp").getElementsByTagName("input");//获取单选框集合
+        for (var i = 0; i < _radio.length-1; i++)
+            if (_radio[i].checked == true) {
+                flag = 1;
+                break;
+            }
+        if (!flag) {
+            alert("您还未答题，无法提交");
+            return false;
+        }
+        else {
+            return true;
+        }
+        }
+    </script>
 </div>

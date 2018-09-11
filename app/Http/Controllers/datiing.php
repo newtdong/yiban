@@ -13,6 +13,9 @@ class datiing extends Controller
 
     public function index(Request $request)
     {
+       $flag=functions::ifsessonname();
+        if($flag==1)
+            return view('jump');
 
         /*检测是否已经参与过此活动*/
 
@@ -29,7 +32,6 @@ class datiing extends Controller
             session(['answer'=>$answer]);
             /*存储本次请求的时间戳*/
         session(['starttime'=>$_SERVER['REQUEST_TIME']]);
-        dump($request);
         return view('datiing',['sub'=>$sub,'sum'=>1]);
     }
 

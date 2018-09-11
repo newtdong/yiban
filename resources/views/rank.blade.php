@@ -13,6 +13,8 @@
     <script type="text/javascript" src="/index/slide.js"></script>
     <link rel="stylesheet" href="/index/jplayer.blue.monday.css">
     <script type="text/javascript" src="/index/jquery.jplayer.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
     <script>
         function page(name, value) {
             var keyValue = name + "=" + value;
@@ -51,32 +53,97 @@
         </ul>
     </div>
 </div>
-<div id="main" style="font-size: 22px;text-align: center">
+<!-- <div id="main" style="font-size: 22px;text-align: center">
     此功能正在开发中，敬请期待！
-</div>
-
-    <script>
-        function baominglink(uid) {
-            if (uid && uid > 0) {
-                return true;
-            }
-            alert('请先登录！');
-            return false;
+</div> -->
+<div id="container" style="width: 600px; height:1000px ; margin: 0 auto;margin-top: 120px"></div>
+<script language="JavaScript">
+$(document).ready(function() {  
+   var chart = {
+      type: 'bar'
+   };
+   var title = {
+      text: '平均成绩TOP20'   
+   };
+   var subtitle = {
+      text: null  
+   };
+   var xAxis = {
+      categories: [
+      @foreach($rank as $item)
+      '{{$item->name}}',
+    @endforeach
+      ],
+      title: {
+         text: null
+      }
+   };
+   var yAxis = {
+      min: 0,
+      title: {
+         text: '平均成绩',
+         align: 'high'
+      },
+      labels: {
+         overflow: 'justify'
+      },
+      max:100
+   };
+   var tooltip = {
+      valueSuffix: ' 分'
+   };
+   var plotOptions = {
+      bar: {
+         dataLabels: {
+            enabled: true
+         }
+      }
+   };
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -40,
+      y: 100,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+      shadow: true
+   };
+   var credits = {
+      enabled: false
+   };
+   
+   var series= [{
+         name: '平均成绩',
+            data: [
+        @foreach($rank as $item)
+      {{$item->avage}},
+      @endforeach
+      ]
         }
-    </script>
-
-    <div class="xinwen" style="display: none; padding: 20px 0px; opacity: 0;">
-        <ul class="newslist">
-            <p style="text-align:center;font-size:20px;color:#666;padding:50px 0;">暂无新闻速递</p>
-        </ul>
-        <div class="pages">
-        </div>
-    </div>
-
-    <div class="clearfix" style="opacity: 0; display: none;"></div>
-
-</div>
-
-<script type="text/javascript">
-
+   ];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;   
+   json.subtitle = subtitle; 
+   json.tooltip = tooltip;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;  
+   json.series = series;
+   json.plotOptions = plotOptions;
+   json.legend = legend;
+   json.credits = credits;
+   $('#container').highcharts(json);
+  
+});
 </script>
+</body>
+</html>
+
+    
+   
+    
+
+

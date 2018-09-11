@@ -8,19 +8,30 @@ class index extends Controller
 {
 
     public function index(Request $request){
+
         $code=functions::ifcode($request['code']);
-        //dump($code);
         $accesstoken=functions::getaccesstoken($code);
+        $info=functions::getinfo($accesstoken);
+        $flag=functions::ifsessonname();
+        if($flag==1)
+            return view('jump');
+        //dump($accesstoken);
+        //dump($info);
         //dump($request);
         //dump($code);
 
-        /*获取学生信息并存入session*/
-        $info=functions::getinfo($accesstoken);
-/*
- * 展示首页
- * */
-
         return view('index');
+        
+
+      
+        /*获取学生信息并存入session*/
+
+        /*
+         * 展示首页
+         * */
+//dump($code);
+
+
     }
 
 
