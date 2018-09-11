@@ -10,7 +10,7 @@ class functions extends Controller
     //web参数，由易班网给定
     static $appid = "7b019d433529d449";
     static $appsecret = "434787ce017b4ff4f800678b33244325";
-    static $callback = "http://yiban.cs.com";
+    static $callback = "http://yiban.dlinkblog.cn";
     /*题目数*/
     static $sum=10;
 
@@ -22,7 +22,7 @@ class functions extends Controller
         if ($code)
             return $code;
         else
-            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://yiban.cs.com");
+            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://yiban.dlinkblog.cn");
     }
 
     /*
@@ -33,12 +33,13 @@ class functions extends Controller
         $uri = 'https://oauth.yiban.cn/token/info?code=' . $token . '&client_id=' . self::$appid . '&client_secret=' . self::$appsecret . '&redirect_uri=' . self::$callback;
         $response = self::requir($uri);
         $response = json_decode($response, true);
+        //dump($token);
         //var_dump($response);
         if (isset($response['access_token'])) {
             session(['access_token' => $response['access_token']]);
             return $response['access_token'];
         } else {
-            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://yiban.cs.com");
+            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://yiban.dlinkblog.cn");
 
         }
 

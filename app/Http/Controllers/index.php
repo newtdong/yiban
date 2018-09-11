@@ -9,6 +9,7 @@ class index extends Controller
 
     public function index(Request $request){
         $code=functions::ifcode($request['code']);
+        //dump($code);
         $accesstoken=functions::getaccesstoken($code);
         //dump($request);
         //dump($code);

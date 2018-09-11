@@ -29,6 +29,7 @@ class datiing extends Controller
             session(['answer'=>$answer]);
             /*存储本次请求的时间戳*/
         session(['starttime'=>$_SERVER['REQUEST_TIME']]);
+        dump($request);
         return view('datiing',['sub'=>$sub,'sum'=>1]);
     }
 
