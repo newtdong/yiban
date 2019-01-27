@@ -1,10 +1,10 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : Tencent
+ Source Server         : 
  Source Server Type    : MySQL
  Source Server Version : 50643
- Source Host           : 123.207.140.223:3306
+ Source Host           : 
  Source Schema         : yiban
 
  Target Server Type    : MySQL
