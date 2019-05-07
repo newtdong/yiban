@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\DB;
 class functions extends Controller
 {
     //web参数，由易班网给定
-    static $appid = "7b019d433529d449";
-    static $appsecret = "434787ce017b4ff4f800678b33244325";
-    static $callback = "http://202.199.24.76";
+    static $appid = "be70db817cd306a9";
+    static $appsecret = "33b7ab89941f22a18263fdd1c88b0c3b";
+    static $callback = "http://yiban2.dlink.com";
     /*题目数量*/
     static $sum=25;
 
@@ -18,10 +18,11 @@ class functions extends Controller
      * code检测：检测是否授权  */
     public static function ifcode($code)
     {
+        $redirct_url="location:https://oauth.yiban.cn/code/html?client_id=".self::$appid."&redirect_uri=".self::$callback;
         if ($code)
             return $code;
         else
-            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://202.199.24.76");
+            header($redirct_url);
     }
 
     /*
@@ -29,7 +30,7 @@ class functions extends Controller
      * */
     public static function getaccesstoken($token)
     {
-        $uri = 'https://oauth.yiban.cn/token/info?code=' . $token . '&client_id=' . self::$appid . '&client_secret=' . self::$appsecret . '&redirect_uri=http://202.199.24.76';
+        $uri = 'https://oauth.yiban.cn/token/info?code=' . $token . '&client_id=' . self::$appid . '&client_secret=' . self::$appsecret . '&redirect_uri='.self::$callback;
         $response = self::requir($uri);
         $response = json_decode($response, true);
         //dump($token);
@@ -38,7 +39,7 @@ class functions extends Controller
             session(['access_token' => $response['access_token']]);
             return $response['access_token'];
         } else {
-            header("location:https://oauth.yiban.cn/code/html?client_id=7b019d433529d449&redirect_uri=http://202.199.24.76");
+            header("location:https://oauth.yiban.cn/code/html?client_id=".self::$appid."&redirect_uri=".self::$callback);
 
         }
 
@@ -113,7 +114,8 @@ class functions extends Controller
             "time" => $time,
         );
         if (DB::table('user')->where('userid', session('yb_userid'))->exists()) {
-            return view('hasjoin');
+//            return view('hasjoin');
+            DB::table('user')->where('userid', session('yb_userid'))->update(['score'=>$score]);
         } else
             DB::table('user')->insert($data);
             self::rank(session('yb_schoolid'),$score,session('yb_schoolname'));
@@ -166,4 +168,11 @@ class functions extends Controller
            return 1;
         }
     }
+    public static function ifmobile() {
+        if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false||preg_match('/QQBrowser/i',$_SERVER['HTTP_USER_AGENT' ])) {
+            return true;
+        } else {
+            return false;
+        }
+}
 }

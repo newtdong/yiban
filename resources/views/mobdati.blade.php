@@ -3,8 +3,6 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>不忘改革初心 坚定砥砺前行</title>
-    <script type="text/javascript" src="/index/jquery-1.9.1.min.js"></script>
-
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -15,10 +13,11 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/index/main.css">
     <link rel="stylesheet" href="index/index.css">
+    <script type="text/javascript" src="/index/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/index/Mtool.js"></script>
     <script type="text/javascript" src="/index/hm_popBox.js"></script>
     <script type="text/javascript" src="/index/login.js"></script>
-{{--    <script type="text/javascript" src="/index/index.js" id="welfare" data-name="jieshao"></script>--}}
+    <script type="text/javascript" src="/index/index.js" id="welfare" data-name="jieshao"></script>
     <script type="text/javascript" src="/index/slide.js"></script>
     <link rel="stylesheet" href="/index/jplayer.blue.monday.css">
     <script type="text/javascript" src="/index/jquery.jplayer.min.js"></script>

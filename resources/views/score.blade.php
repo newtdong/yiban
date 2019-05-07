@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0036)http://proj.yiban.cn/project/40znhd/ -->
+<!-- saved from url=(0036)http://proj.yiban.cn/project/40znhd/ 嘿嘿-->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>不忘改革初心 坚定砥砺前行</title>
@@ -9,7 +9,7 @@
     <script type="text/javascript" src="/index/Mtool.js"></script>
     <script type="text/javascript" src="/index/hm_popBox.js"></script>
     <script type="text/javascript" src="/index/login.js"></script>
-    <script type="text/javascript" src="/index/index.js" id="welfare" data-name="jieshao"></script>
+{{--    <script type="text/javascript" src="/index/index.js" id="welfare" data-name="jieshao"></script>--}}
     <script type="text/javascript" src="/index/slide.js"></script>
     <link rel="stylesheet" href="/index/jplayer.blue.monday.css">
     <script type="text/javascript" src="/index/jquery.jplayer.min.js"></script>
@@ -38,7 +38,7 @@
         }
     </script>
 </head>
-<body>
+<body style="background-color: #A40000">
 <div id="head">
     <div class="head_img">
         <img src="/index/topbg.jpg" style="width: 100%;height: 100%" alt="">
@@ -61,28 +61,4 @@
         @endif
 </div>
 
-    <script>
-        function baominglink(uid) {
-            if (uid && uid > 0) {
-                return true;
-            }
-            alert('请先登录！');
-            return false;
-        }
-    </script>
-
-    <div class="xinwen" style="display: none; padding: 20px 0px; opacity: 0;">
-        <ul class="newslist">
-            <p style="text-align:center;font-size:20px;color:#666;padding:50px 0;">暂无新闻速递</p>
-        </ul>
-        <div class="pages">
-        </div>
-    </div>
-
-    <div class="clearfix" style="opacity: 0; display: none;"></div>
-
-</div>
-
-<script type="text/javascript">
-
-</script>
+</body>

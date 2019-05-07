@@ -8,6 +8,8 @@ class hasjoin extends Controller
 {
     //
     public function index(){
-        return view('/hasjoin');
+        if(functions::ifmobile())
+            return view('gobrowser');
+        return view('hasjoin');
     }
 }

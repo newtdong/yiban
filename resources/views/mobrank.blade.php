@@ -9,7 +9,7 @@
     <script type="text/javascript" src="/index/Mtool.js"></script>
     <script type="text/javascript" src="/index/hm_popBox.js"></script>
     <script type="text/javascript" src="/index/login.js"></script>
-{{--    <script type="text/javascript" src="/index/index.js" id="welfare" data-name="jieshao"></script>--}}
+    <script type="text/javascript" src="/index/index.js" id="welfare" data-name="jieshao"></script>
     <script type="text/javascript" src="/index/slide.js"></script>
     <link rel="stylesheet" href="/index/jplayer.blue.monday.css">
     <script type="text/javascript" src="/index/jquery.jplayer.min.js"></script>
