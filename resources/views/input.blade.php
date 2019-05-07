@@ -15,16 +15,39 @@
 
 </head>
 <body>
+@isset($status)
+@if($status=="success")
 
+    　　<div class="alert alert-success alert-dismissable" role="alert">
+        <button type="button" class="close" data-dismiss="alert"
+                aria-hidden="true">
+            &times;
+        </button>
+        　　　　题目保存成功，可在本页继续添加！
+        　　</div>
+@else
+    　　<div class="alert alert-success alert-dismissable" role="alert">
+        <button type="button" class="close" data-dismiss="alert"
+                aria-hidden="true">
+            &times;
+        </button>
+        　　　　保存失败！请联系网站管理员!
+        　　</div>
+@endif
+@endisset
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1" >
-            <form action="{{url('/inputing')}}" class="form-horizontal" role="form">
+            <form action="{{url('/input_save')}}" class="form-horizontal" role="form" method="post">
+                <div class="form-group">
+                    <label for="name">说明：</label>
+                   <p>填空题需填写的部分用4个下划线代替，或光标刚在需要填空位置，点击”插入“按钮</p>
+                </div>
                 <div class="form-group">
                     <label for="name">问题</label>
-                    <textarea class="form-control" type="text" placeholder="请输入题面" name="que" id="tex1"></textarea>
+                    <button class="btn btn-default" id="but" style="float: right" type="button">插入</button><br><br>
+                    <textarea class="form-control" type="text" placeholder="请输入题面" name="que" id="tex1" rows="5"></textarea>
                 </div>
-                <input id="but" type="button">weweqqq</input>
                 <div class="form-group">
                     <label for="ans">答案1</label>
                     <input class="form-control" type="text" name="ans1">
@@ -41,6 +64,10 @@
                     <label for="ans">答案4</label>
                     <input class="form-control" type="text" name="ans4">
                 </div>
+                <div class="form-group">
+                    <label for="ans">答案5</label>
+                    <input class="form-control" type="text" name="ans4">
+                </div>
                 <input type="submit" value="提交" class="btn btn-default">
 
 
@@ -49,9 +76,7 @@
     </div>
 
 </div>
-<p>dsds</p>
-<button id="ch_button" value="插入" >插入</button>
-<textarea name="content" id="test_in" rows="30" cols="100"></textarea>
+
 <script >
     $(function() {
         /* 在textarea处插入文本--Start */
@@ -100,7 +125,7 @@
     });
     $(document).ready(function(){
         $("#but").click( function () {
-            $("#tex1").insertContent("<upload/day_140627/201406271546349972.jpg>");
+            $("#tex1").insertContent("____");
         });
     });
 </script>

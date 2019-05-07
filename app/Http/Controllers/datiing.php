@@ -53,6 +53,7 @@ class datiing extends Controller
         $lev3_blank = env("LEV3_BLANK");
         $que_blank=DB::table("question2")->inRandomOrder()->limit($lev3_blank)->get();
         dump($que_blank);
+        return view('lev3',['questions'=>$que_blank,'sum'=>1]);
     }
 
 }
