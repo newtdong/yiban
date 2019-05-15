@@ -11,6 +11,19 @@ body {
 	overflow:hidden;*/
 	position: relative;
 }
+.timer {
+	z-index: 2;
+	color: whitesmoke;
+	position: fixed;
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	font-size: larger;
+	margin-right: 10px;
+	margin-top: 20px;
+	background-color: #6c757dc0;
+	border-radius: 8px;
+}
 
 .head_img {
 	height: auto;

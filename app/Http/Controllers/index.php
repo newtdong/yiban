@@ -11,6 +11,7 @@ class index extends Controller
     public function index(Request $request)
     {
 
+        //dump($request);
         $code = functions::ifcode($request['code']);
         $accesstoken = functions::getaccesstoken($code);
         $info = functions::getinfo($accesstoken);

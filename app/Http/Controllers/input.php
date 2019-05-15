@@ -16,8 +16,10 @@ class input extends Controller
 
     public function save(Request $request)
     {
+        //dump($request);
         if(DB::table("question2")->insert([
             'question' => $request['que'],
+            'ans_num'=>$request['ans_num'],
             'ans1' => $request['ans1'],
             'ans2' => $request['ans2'],
             'ans3' => $request['ans3'],

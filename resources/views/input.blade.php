@@ -41,12 +41,22 @@
             <form action="{{url('/input_save')}}" class="form-horizontal" role="form" method="post">
                 <div class="form-group">
                     <label for="name">说明：</label>
-                   <p>填空题需填写的部分用4个下划线代替，或光标刚在需要填空位置，点击”插入“按钮</p>
+                   <p>填空题需填写的部分用4个下划线代替，或将光标放在需要填空位置，点击”插入“按钮插入下划线</p>
                 </div>
                 <div class="form-group">
                     <label for="name">问题</label>
                     <button class="btn btn-default" id="but" style="float: right" type="button">插入</button><br><br>
                     <textarea class="form-control" type="text" placeholder="请输入题面" name="que" id="tex1" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="ans">空格数</label>
+                    <select class="form-control" name="ans_num">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="ans">答案1</label>
@@ -66,11 +76,12 @@
                 </div>
                 <div class="form-group">
                     <label for="ans">答案5</label>
-                    <input class="form-control" type="text" name="ans4">
+                    <input class="form-control" type="text" name="ans5">
                 </div>
+
                 <input type="submit" value="提交" class="btn btn-default">
 
-
+<br><br><br>
             </form>
         </div>
     </div>

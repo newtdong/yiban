@@ -62,7 +62,7 @@
 </div>
 <div id="main">
     <form action="" style="text-align: center">
-        <input type="button" value="开始答题" style="text-align: center" class="btn btn-info" onclick="javascrtpt:window.location.href='{{url('datiing')}}'">
+        <input type="button" value="开始答题" style="text-align: center" class="btn btn-info" onclick="javascrtpt:window.location.href='{{url('datiing1')}}'">
     </form>
 </div>
 
