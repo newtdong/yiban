@@ -8,15 +8,11 @@ use Illuminate\Support\Facades\DB;
 class functions extends Controller
 {
     //web参数，由易班网给定
-    static $appid = "be70db817cd306a9";
-    static $appsecret = "33b7ab89941f22a18263fdd1c88b0c3b";
-    static $callback = "http://yiban.dlinks.cn";
+    static $appid = "";
+    static $appsecret = "";
+    static $callback = "";
 
-//    static $appid = "be70db817cd306a9";
-//    static $appsecret = "33b7ab89941f22a18263fdd1c88b0c3b";
-//    static $callback = "http://yiban2.dlink.com";
-    /*题目数量*/
-    static $sum = 25;
+
 
     /*
      * code检测：检测是否授权  */
