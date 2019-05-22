@@ -12,6 +12,7 @@ php版本：7.2.4
 
 ### 环境搭建
 Windows下可用wampserver集成环境工具，Linux下建议手动编译安装各环境。
+wampserver安装教程：https://blog.csdn.net/qq_37419077/article/details/90440539
 
 #### 注意：web根目录为public文件夹，文件安放完毕后将.env.example文件复制为.env文件，并修改其中配置。另，app\Http\Controllers\functions.php文件中的易班id，密码和回调函数同样需要修改。
 End.
